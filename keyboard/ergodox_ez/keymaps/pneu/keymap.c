@@ -21,14 +21,14 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * |=/LShift|Z/Shft|   X  |   C  |   V  |   B  |/ShAlt|           |/ShAlt|   N  |M/Mdia|   ,  |   .  |//Shft|-/RShift|
  * `--------+------+------+------+------+-------------'           `-------------+------+------+------+------+--------'
  *   | L1   |KC_RO |      | Alt  |      |                                       |E/J   | Alt  |      |      | ~L1  |
- *   |      |/SAlt |      |      |/~L4  |                                       |/~L3  |      |      |/SAlt |      |
+ *   |      |/SAlt |      |      |/Ctrl |                                       |/~L3  |      |      |/SAlt |      |
  *   `----------------------------------'                                       `----------------------------------'
  *                                        ,-------------.       ,-------------.
  *                                        | End  | Home |       | Left | Right  |
  *                                 ,------|------|------|       |------+--------+------.
  *                                 |      |      | PgUp |       | Up   |        |      |
  *                                 | Back |Space |------|       |------| Enter  |Space |
- *                                 | /Ctrl|/Shift| PgDn |       | Down | /Alt   |/Shift|
+ *                                 | /~L4 |/Shift| PgDn |       | Down | /Alt   |/Shift|
  *                                 `--------------------'       `----------------------'
  */
 // If it accepts an argument (i.e, is a function), it doesn't need KC_.
@@ -39,10 +39,10 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         KC_LBRC,        KC_Q,         KC_W,   KC_E,   KC_R,   KC_T,   MEH_T(KC_DELT),
         GUI_T(KC_RBRC), CTL_T(KC_A),         KC_S,   KC_D,   KC_F,   KC_G,
         SFT_T(KC_EQL),  SFT_T(KC_Z),  KC_X,   KC_C,   KC_V,   KC_B,   SFT_T(ALT_T(KC_ESC)),
-        TG(SYMB),       SFT_T(ALT_T(KC_RO)),KC_NO,          KC_LALT,LT(SUPL, KC_NO),
+        TG(SYMB),       SFT_T(ALT_T(KC_RO)),KC_NO,          KC_LALT,CTL_T(KC_NO),
                                               KC_END,         KC_HOME,
                                                               KC_PGUP,
-                                               CTL_T(KC_BSPC),SFT_T(KC_SPC),KC_PGDN,
+                                               LT(SUPL,KC_BSPC),SFT_T(KC_SPC),KC_PGDN,
         // right hand
              KC_APP,      KC_6,   KC_7,   KC_8,   KC_9,   KC_0,             KC_NO,
              MEH_T(KC_INS),KC_Y,   KC_U,   KC_I,   KC_O,   KC_P,             KC_BSLS,
