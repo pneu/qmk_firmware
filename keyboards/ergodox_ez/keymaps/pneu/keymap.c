@@ -20,7 +20,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * |--------+------+------+------+------+------|Esc   |           |Tab   |------+------+------+------+------+--------|
  * |=/LShift|   Z  |   X  |   C  |   V  |   B  |/ShAlt|           |/ShAlt|   N  |M/Mdia|   ,  |   .  |   /  |-/RShift|
  * `--------+------+------+------+------+-------------'           `-------------+------+------+------+------+--------'
- *   | L1   |KC_RO |      | Alt  |      |                                       |E/J   | Alt  |      |      | ~L1  |
+ *   | ~L1  |KC_RO |      | Alt  |      |                                       |E/J   | Alt  |      |      | ~L1  |
  *   |      |/SAlt |      |      |/Ctrl |                                       |/~L3  |      |      |/SAlt |      |
  *   `----------------------------------'                                       `----------------------------------'
  *                                        ,-------------.       ,-------------.
@@ -39,7 +39,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         KC_LBRC,        KC_Q,         KC_W,   KC_E,   KC_R,   KC_T,   MEH_T(KC_DELT),
         GUI_T(KC_RBRC), KC_A,         KC_S,   KC_D,   KC_F,   KC_G,
         SFT_T(KC_EQL),  KC_Z,         KC_X,   KC_C,   KC_V,   KC_B,   SFT_T(ALT_T(KC_ESC)),
-        TG(SYMB),       SFT_T(ALT_T(KC_RO)),KC_NO,          KC_LALT,CTL_T(KC_NO),
+        LT(SYMB,KC_NO), SFT_T(ALT_T(KC_RO)),KC_NO,          KC_LALT,CTL_T(KC_NO),
                                               KC_END,         KC_HOME,
                                                               KC_PGUP,
                                                LT(SUPL,KC_BSPC),SFT_T(KC_SPC),KC_PGDN,
@@ -48,7 +48,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
              MEH_T(KC_INS),KC_Y,   KC_U,   KC_I,   KC_O,   KC_P,             KC_BSLS,
                           KC_H,   KC_J,   KC_K,   KC_L,   KC_SCLN, GUI_T(KC_QUOT),
              SFT_T(ALT_T(KC_TAB)),KC_N,   LT(MDIA, KC_M),   KC_COMM,KC_DOT, KC_SLSH, SFT_T(KC_MINS),
-                                  LT(EXTL, KC_ZKHK),KC_RALT,KC_NO,  SFT_T(ALT_T(KC_NO)),KC_FN1,
+                                  LT(EXTL, KC_ZKHK),KC_RALT,KC_NO,  SFT_T(ALT_T(KC_NO)),LT(SYMB,KC_NO),
              KC_LEFT,        KC_RIGHT,
              KC_UP,
              KC_DOWN,ALT_T(KC_ENT),SFT_T(KC_SPC)
